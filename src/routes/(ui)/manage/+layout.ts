@@ -1,5 +1,7 @@
 import type { LayoutLoad } from "./$types";
 
 export const load : LayoutLoad = () => {
-    title : "Manage Orders"
+    return {
+	title : "Manage Orders"
+    };
 };

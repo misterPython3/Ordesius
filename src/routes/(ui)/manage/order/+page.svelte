@@ -10,11 +10,6 @@
 	    text : "Create Menu",
 	    href : "/manage/create",
 	    imgUrl : "/add-circle.svg"
-	},
-	{ 
-	    text : "Create Menu",
-	    href : "/manage/create",
-	    imgUrl : "/add-circle.svg"
 	}
     ];
 </script>

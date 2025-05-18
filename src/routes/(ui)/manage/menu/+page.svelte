@@ -10,15 +10,9 @@
 	    text : "Create Menu",
 	    href : "/manage/create",
 	    imgUrl : "/add-circle.svg"
-	},
-	{ 
-	    text : "Create Menu",
-	    href : "/manage/create",
-	    imgUrl : "/add-circle.svg"
 	}
     ];
 </script>
-
 {#snippet ManageButton(content : ManageButtonProps)}
     <a href={content.href} class="manage-btn">
 	<div class="manage-btn-img-wrapper">
@@ -27,19 +21,11 @@
 	<span class="manage-btn-text">{content.text}</span>
     </a>
 {/snippet}
-<header class="manage-header flex items-center gap-x-2 px-7 pt-10 pb-8">
-    <nav class="prev px-2">
-	<a href=".." class="prev-button text-2xl text-yellow-600 hover:text-yellow-900 hover:underline underline-offset-2">↩ Home</a>
-    </nav>
-    <h1 class="text-4xl font-semibold ml-4 tracking-tight">Manage Orders</h1>
-</header>
-<section class="manage-section flex flex-row flex-wrap gap-[2vmin] px-8 pt-4">
-    {#each manageButtons as manageBtn, index(index)}
-	{#key index}
-	    {@render ManageButton(manageBtn)}
-	{/key}
-    {/each}
-</section>
+{#each manageButtons as manageBtn, index(index)}
+    {#key index}
+	{@render ManageButton(manageBtn)}
+    {/key}
+{/each}
 <style>
 .manage-btn {
     display:inline-grid;
